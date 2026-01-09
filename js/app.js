@@ -19,6 +19,8 @@ window.addEventListener("load", () => {
     // Hide it completely after the transition
     setTimeout(() => {
         loadingScreen.style.visibility = "hidden";
+        // Play the GSAP timeline animation only after the loading screen fades out
+        if (timeline) timeline.play(); 
     }, 750); // Match the transition duration in CSS
 });
 
@@ -96,7 +98,9 @@ if (window.innerWidth >= 768) {
     main.style.maxHeight = `${window.innerWidth * 0.9}px`;
 }
 
-let timeline = gsap.timeline();
+// Initialize timeline in paused state
+let timeline = gsap.timeline({ paused: true });
+
 setTimeout(() => {
     parallax_el.forEach((el) => {
         el.style.transition = "0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99)";

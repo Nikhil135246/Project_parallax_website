@@ -81,6 +81,15 @@ window.addEventListener("mousemove", (e) => {
     update(e.clientX);
 
 });
+
+window.addEventListener("touchmove", (e) => {
+    if(timeline.isActive()) return;
+    let touch = e.touches[0];
+    xValue = touch.clientX - window.innerWidth / 2;
+    yValue = touch.clientY - window.innerHeight / 2;
+    rotateDegree = xValue / (window.innerWidth / 2) * 20;
+    update(touch.clientX);
+}, { passive: false });
 if (window.innerWidth >= 768) {
     main.style.maxHeight = `${window.innerWidth * 0.6}px`;
 } else {

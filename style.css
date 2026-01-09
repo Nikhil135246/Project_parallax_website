@@ -17,7 +17,10 @@
 
 body {
     font-family: "poppins", sans-serif;
-
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     /* background-color: #333; */
 
 

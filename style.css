@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
 
+:root {
+    --ref-width: 1366;
+    --ref-height: 768;
+}
+
 *,
 *::before,
 *::after {
@@ -146,11 +151,10 @@ main {
 }
 
 .bg-img {
-    position: absolute;
-    width: 3000px;
-    top: calc(50% - 390px);
-    left: calc(50% + 10px);
-    transform: translate(-50%, -50%);
+    position: relative;
+    width: calc(3000 / var(--ref-width) * 100%);
+    top: calc(50% - (390 / var(--ref-height) * 100%));
+    left: calc(50% + (10 / var(--ref-width) * 100%));
     z-index: 1;
 
 }
@@ -158,9 +162,9 @@ main {
 .fog-7 {
     position: absolute;
     z-index: 2;
-    width: 2100px;
-    top: calc(50% - 100px);
-    left: calc(50% + 300px);
+    width: calc(2100 / var(--ref-width) * 100%);
+    top: calc(50% - (100 / var(--ref-height) * 100%));
+    left: calc(50% + (300 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -168,9 +172,9 @@ main {
 .mountain-10 {
     position: absolute;
     z-index: 3;
-    width: 900px;
-    top: calc(50% + 69px);
-    left: calc(50% + 230px);
+    width: calc(900 / var(--ref-width) * 100%);
+    top: calc(50% + (69 / var(--ref-height) * 100%));
+    left: calc(50% + (230 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -178,9 +182,9 @@ main {
 .fog-6 {
     position: absolute;
     z-index: 4;
-    width: 1810px;
-    top: calc(50% + 155px);
-    left: calc(50% + 10px);
+    width: calc(1810 / var(--ref-width) * 100%);
+    top: calc(50% + (155 / var(--ref-height) * 100%));
+    left: calc(50% + (10 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -188,9 +192,9 @@ main {
 .mountain-9 {
     position: absolute;
     z-index: 5;
-    width: 470px;
-    top: calc(50% + 150px);
-    left: calc(50% - 480px);
+    width: calc(470 / var(--ref-width) * 100%);
+    top: calc(50% + (150 / var(--ref-height) * 100%));
+    left: calc(50% - (480 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -198,9 +202,9 @@ main {
 .mountain-8 {
     position: absolute;
     z-index: 6;
-    width: 850px;
-    top: calc(50% + 106px);
-    left: calc(50% - 220px);
+    width: calc(850 / var(--ref-width) * 100%);
+    top: calc(50% + (106 / var(--ref-height) * 100%));
+    left: calc(50% - (220 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -208,9 +212,9 @@ main {
 .fog-5 {
     position: absolute;
     z-index: 7;
-    width: 650px;
-    top: calc(50% + 160px);
-    left: calc(50% + 20px);
+    width: calc(650 / var(--ref-width) * 100%);
+    top: calc(50% + (160 / var(--ref-height) * 100%));
+    left: calc(50% + (20 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -218,9 +222,9 @@ main {
 .mountain-7 {
     position: absolute;
     z-index: 8;
-    width: 508px;
-    top: calc(50% + 123px);
-    left: calc(50% + 305px);
+    width: calc(508 / var(--ref-width) * 100%);
+    top: calc(50% + (123 / var(--ref-height) * 100%));
+    left: calc(50% + (305 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -228,7 +232,7 @@ main {
 .text {
     position: absolute;
     z-index: 9;
-    top: calc(50% - 130px);
+    top: calc(50% - (130 / var(--ref-height) * 100%));
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -239,7 +243,7 @@ main {
 
 .text h2 {
     font-weight: 100;
-    margin-left: 40px;
+    margin-left: calc(40 / var(--ref-width) * 100%);
     
     font-size: 6.5rem;
     line-height: 0.88;
@@ -248,7 +252,7 @@ main {
 
 .text h1 {
     font-weight: 800;
-    margin-left: 40px;
+    margin-left: calc(40 / var(--ref-width) * 100%);
     font-size: 6.7rem;
     line-height: 0.88;
     pointer-events: auto;
@@ -257,9 +261,9 @@ main {
 .mountain-6 {
     position: absolute;
     z-index: 10;
-    width: 408px;
-    top: calc(50% + 60px);
-    left: calc(50% + 590px);
+    width: calc(408 / var(--ref-width) * 100%);
+    top: calc(50% + (60 / var(--ref-height) * 100%));
+    left: calc(50% + (590 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -267,9 +271,9 @@ main {
 .fog-4 {
     position: absolute;
     z-index: 11;
-    width: 590px;
-    top: calc(50% + 223px);
-    left: calc(50% - 60px);
+    width: calc(590 / var(--ref-width) * 100%);
+    top: calc(50% + (223 / var(--ref-height) * 100%));
+    left: calc(50% - (60 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -277,9 +281,9 @@ main {
 .mountain-5 {
     position: absolute;
     z-index: 12;
-    width: 625px;
-    top: calc(50% + 280px);
-    left: calc(50% + 135px);
+    width: calc(625 / var(--ref-width) * 100%);
+    top: calc(50% + (280 / var(--ref-height) * 100%));
+    left: calc(50% + (135 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -287,9 +291,9 @@ main {
 .fog-3 {
     position: absolute;
     z-index: 13;
-    width: 1600px;
-    top: calc(50% + 110px);
-    left: calc(50% - 15px);
+    width: calc(1600 / var(--ref-width) * 100%);
+    top: calc(50% + (110 / var(--ref-height) * 100%));
+    left: calc(50% - (15 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -297,9 +301,9 @@ main {
 .mountain-4 {
     position: absolute;
     z-index: 14;
-    width: 780px;
-    top: calc(50% + 196px);
-    left: calc(50% - 381px);
+    width: calc(780 / var(--ref-width) * 100%);
+    top: calc(50% + (196 / var(--ref-height) * 100%));
+    left: calc(50% - (381 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -307,9 +311,9 @@ main {
 .mountain-3 {
     position: absolute;
     z-index: 15;
-    width: 520px;
-    top: calc(50% + 150px);
-    left: calc(50% + 790px);
+    width: calc(520 / var(--ref-width) * 100%);
+    top: calc(50% + (150 / var(--ref-height) * 100%));
+    left: calc(50% + (790 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -317,10 +321,10 @@ main {
 /* .mountain-3 {
     position: absolute;
     z-index: 15;
-    width: 508px;
-    height: 1000px;
-    top: calc(50% - 70px);
-    left: calc(50% - 705px);
+    width: calc(508 / var(--ref-width) * 100%);
+    height: calc(1000 / var(--ref-height) * 100%);
+    top: calc(50% - (70 / var(--ref-height) * 100%));
+    left: calc(50% - (705 / var(--ref-width) * 100%));
     
     transform: translate(-50%, -50%) scaleX(-1);
     
@@ -328,9 +332,9 @@ main {
 .fog-2 {
     position: absolute;
     z-index: 16;
-    width: 1600px;
-    top: calc(50% + 110px);
-    left: calc(50% - 15px);
+    width: calc(1600 / var(--ref-width) * 100%);
+    top: calc(50% + (110 / var(--ref-height) * 100%));
+    left: calc(50% - (15 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -338,9 +342,9 @@ main {
 .mountain-2 {
     position: absolute;
     z-index: 17;
-    width: 700px;
-    top: calc(50% + 170px);
-    left: calc(50% + 435px);
+    width: calc(700 / var(--ref-width) * 100%);
+    top: calc(50% + (170 / var(--ref-height) * 100%));
+    left: calc(50% + (435 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 
@@ -351,9 +355,9 @@ main {
 .mountain-1 {
     position: absolute;
     z-index: 18;
-    width: 600px;
-    top: calc(50% + 50px);
-    left: calc(50% - 650px);
+    width: calc(600 / var(--ref-width) * 100%);
+    top: calc(50% + (50 / var(--ref-height) * 100%));
+    left: calc(50% - (650 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 
@@ -363,9 +367,9 @@ main {
 .sun-rays {
     position: absolute;
     z-index: 19;
-    width: 500;
-    top: calc(50% - 5px);
-    left: calc(50% + 300px);
+    width: calc(500 / var(--ref-width) * 100%);
+    top: calc(30% - (5 / var(--ref-height) * 100%));
+    left: calc(60% + (300 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
     pointer-events: none;
@@ -376,9 +380,9 @@ main {
 
     position: absolute;
     z-index: 20;
-    width: 200;
-    top: calc(50% + 80px);
-    left: calc(50% - 100px);
+    width: calc(200 / var(--ref-width) * 100%);
+    top: calc(50% + (80 / var(--ref-height) * 100%));
+    left: calc(50% - (100 / var(--ref-width) * 100%));
 
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -387,9 +391,9 @@ main {
 .fog-1 {
     position: absolute;
     z-index: 21;
-    width: 2000px;
-    top: calc(50% + 100px);
-    left: calc(50% + 120px);
+    width: calc(2000 / var(--ref-width) * 100%);
+    top: calc(50% + (100 / var(--ref-height) * 100%));
+    left: calc(50% + (120 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
 }
@@ -452,6 +456,10 @@ main {
     .hamburger a{
         height: 30px;
         width: 30px;
+    }
+
+    .bg-img{
+        
     }
 }
 

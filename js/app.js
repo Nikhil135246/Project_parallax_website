@@ -1,4 +1,34 @@
 const parallax_el = document.querySelectorAll(".parallax");
+const main = document.querySelector("main");
+
+// --- DEBUG LOGS FOR INITIAL LOAD ---
+console.log("=== PARALLAX DEBUG INFO ===");
+console.log(`Viewport Dimensions: Width=${window.innerWidth}, Height=${window.innerHeight}`);
+console.log(`Device Pixel Ratio (Zoom Level): ${window.devicePixelRatio}`);
+
+parallax_el.forEach((el, i) => {
+    const rect = el.getBoundingClientRect();
+    const style = window.getComputedStyle(el);
+    console.group(`Image ${i + 1}: ${el.className}`);
+    console.log("Visible Position (Rect):", {
+        x: rect.x, y: rect.y,
+        width: rect.width, height: rect.height,
+        right: rect.right, bottom: rect.bottom
+    });
+    console.log("Computed Style:", {
+        left: style.left,
+        top: style.top
+    });
+    console.log("Parallax Config:", {
+        speedx: el.dataset.speedx,
+        speedy: el.dataset.speedy,
+        speedz: el.dataset.speedz,
+        distance: el.dataset.distance
+    });
+    console.groupEnd();
+});
+console.log("===========================");
+// -----------------------------------
 
 let xValue = 0, yValue = 0;
 let rotateDegree = 0;
@@ -27,7 +57,19 @@ window.addEventListener("mousemove", (e) => {
     update(e.clientX);
 
 });
+if (window.innerWidth >= 725) {
+    main.style.maxHeight = `${window.innerWidth * 0.6}px`;
+} else {
+    main.style.maxHeight = `${window.innerWidth * 0.9}px`;
+}
+
 let timeline = gsap.timeline();
+setTimeout(() => {
+    parallax_el.forEach((el) => {
+        el.style.transition = "0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99)";
+    });
+}, timeline.endTime() * 1000);
+
 Array.from(parallax_el).filter(el =>!el.classList.contains("text")).forEach(el => {
 
 

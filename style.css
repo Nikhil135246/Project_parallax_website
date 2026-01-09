@@ -232,7 +232,7 @@ main {
 .text {
     position: absolute;
     z-index: 9;
-    top: calc(50% - (130 / var(--ref-height) * 100%));
+    top: calc(50% - (150 / var(--ref-height) * 100%));
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -368,8 +368,8 @@ main {
     position: absolute;
     z-index: 19;
     width: calc(500 / var(--ref-width) * 100%);
-    top: calc(30% - (5 / var(--ref-height) * 100%));
-    left: calc(60% + (300 / var(--ref-width) * 100%));
+    top: calc(50% - (150 / var(--ref-height) * 100%));
+    left: calc(50% + (450 / var(--ref-width) * 100%));
     transform: translate(-50%, -50%);
 
     pointer-events: none;
@@ -409,6 +409,30 @@ main {
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
     pointer-events: none;
 }
+
+/* --- Loading Screen Styles --- */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #353; /* Match your main background */
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.75s ease-out, visibility 0.75s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#lottie-loader {
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+}
+
+/* --- End Loading Screen Styles --- */
 
 
 @media (max-width: 1100px) {

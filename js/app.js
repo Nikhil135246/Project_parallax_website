@@ -1,3 +1,27 @@
+// Wait for window load
+document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Lottie Animation
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-loader'), // the dom element that will contain the animation
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'img/Sandy Loading.json' // the path to the animation json
+    });
+});
+
+window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    // Fade out the loading screen
+    loadingScreen.style.opacity = "0";
+    // Make it non-interactive
+    loadingScreen.style.pointerEvents = "none";
+    // Hide it completely after the transition
+    setTimeout(() => {
+        loadingScreen.style.visibility = "hidden";
+    }, 750); // Match the transition duration in CSS
+});
+
 const parallax_el = document.querySelectorAll(".parallax");
 const main = document.querySelector("main");
 
@@ -57,7 +81,7 @@ window.addEventListener("mousemove", (e) => {
     update(e.clientX);
 
 });
-if (window.innerWidth >= 725) {
+if (window.innerWidth >= 768) {
     main.style.maxHeight = `${window.innerWidth * 0.6}px`;
 } else {
     main.style.maxHeight = `${window.innerWidth * 0.9}px`;
